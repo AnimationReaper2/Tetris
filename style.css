@@ -1,0 +1,31 @@
+.grid{
+    display: grid;
+    grid-template-areas: 
+    'gBoard nPiece'
+    'gBoard btn'
+    'gBoard score';
+}
+
+#gameboard{
+    width : 500px;
+    height : 800px;
+    border : 1px solid #000000;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-area: gBoard;
+}
+
+#nextpiece{
+    width : 300px;
+    height : 300px;
+    border : 1px solid #000000;
+    grid-area: nPiece;
+}
+
+.buttons{
+    grid-area: btn;
+}
+
+.scoreboard{
+    grid-area: score;
+}
