@@ -8,18 +8,28 @@
 </head>
 <body>
     <div class="grid">
+        <div class="right">
+            <canvas id="nextpiece"></canvas>
+        
+            <div class="buttons-home">
+                <button id="playbtn">Play</button>
+                <button id="resetbtn">Reset</button>
+                <br><br>
+                <button id="rotate">Rotate</button>
+                <br>
+                <button id="left" class="move">Left</button>
+                <button id="down" class="move">Down</button>
+                <button id="right" class="move">Right</button>
+            </div>
+        
+            <section class="scoreBoard">
+                <h3>Score : <span id="score">0</span></h3>
+            </section>
+        </div>
+
         <canvas id="gameboard"></canvas>
-    
-        <canvas id="nextpiece"></canvas>
-    
-        <section class="buttons">
-            <button class="playbtn">Play</button>
-            <button class="resetbtn">Reset</button>
-        </section>
-    
-        <section class="scoreBoard">
-            <p>Score : </p> <div class="Score">0</div>
-        </section>
     </div>
+    <script src="code.js"></script>
+    <script src="tetris.js"></script>
 </body>
 </html>
