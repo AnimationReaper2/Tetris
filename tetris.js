@@ -1,5 +1,7 @@
 const c = document.getElementById('gameboard');
 const ctx = c.getContext('2d');
+const np = document.getElementById('nextpiece');
+const cx = np.getContext('2d');
 const pbtn = document.getElementById('playbtn');
 const rbtn = document.getElementById('resetbtn');
 const rghtbtn = document.getElementById('right');
@@ -29,6 +31,7 @@ function play(){
     console.log('play');
     pc();
     moving();
+    nPiece();
 }
 
 function pc(){
