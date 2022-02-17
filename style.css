@@ -1,69 +1,88 @@
 body{
-    padding: 1em;
+    background: #202028;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 2em;
     text-align: center;
+}
+canvas{
+    border: solid .2em #0DC2FF;
+    height: 90%;
+}
+#t{
+    color: #FF0D72;
+}
+#e{
+    color: #0DC2FF;
+}
+#t2{
+    color: #0DFF72;
+}
+#r{
+    color: #F538FF;
+}
+#i{
+    color: #FF8E0D;
+}
+#s{
+    color: #FFE138;
+}
+#sc{
+    color: #F538FF;
+}
+#play{
+    background-color: #FF8E0D;
+    color: black;
+    padding: 10px;
+    margin: 20px 20px 25px 20px;
+}
+#reset{
+    background-color: #FF0D72;
+    color: black;
+    padding: 10px;
+    margin: 20px 20px 25px 20px;
+}
+#instructions{
+    background-color: #0DFF72;
+    color: black;
+    padding: 10px;
+    margin: 20px 20px 25px 20px;
+}
+p {
+    line-height: 1.5;
+    color: white;
+    font-size: 15px;
+}
+#myModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#modal-content {
     background-color: black;
-    color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }
-
-.grid{
-    display: grid;
-    grid-template-columns: 700px 200px;
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
-
-.right{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#gameboard{
-    display: flex;
-    border: solid 2px white;
-    background-color: black;
-    height: 600px;
-    width: 400px;
-}
-
-#nextpiece{
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border: solid 2px grey;
-    background-color: black;
-    height: 250px;
-    width: 250px;
-}
-
-#score{
-    color: white;
-}
-
-#playbtn{
-    background-color: blue;
-    color: white;
-    padding: 10px;
-    margin: 20px 20px 25px 20px;
-}
-
-#resetbtn{
-    background-color: red;
-    color: white;
-    padding: 10px;
-    margin: 20px 20px 25px 20px;
-}
-
-#rotate{
-    background-color: purple;
-    color: white;
-    padding: 10px;
-    margin: 20px 20px 25px 20px;
-}
-
-.move{
-    background-color: green;
-    color: white;
-    padding: 10px;
-    margin: 20px 20px 25px 20px;
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
