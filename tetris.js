@@ -26,8 +26,6 @@ context.scale(20, 20);
 
 var music;
 
-
-
 function arenaSweep() {
     let rowCount = 1;
     outer: for (let y = arena.length -1; y > 0; --y) {
@@ -296,6 +294,9 @@ function reset(){
     updateScore();
     update();
 }
-/*
-music = new sound("Tetris.mp3");
-music.play();*/
+
+music = new sound('Tetris.mp3');
+music.play();
+
+//music doesn't play automatically, only after I interacted with the document and reset the play.
+//reset didn't reset the whole board just the piece.
