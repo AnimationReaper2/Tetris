@@ -8,6 +8,7 @@ const span = document.getElementsByClassName("close")[0];
 
 pla.addEventListener('click', startGame);
 res.addEventListener('click', reset);
+
 instructionsButton.addEventListener("click", () => {
     modal.style.display = "block";
 });
@@ -24,7 +25,12 @@ window.onclick = function (event) {
 
 context.scale(20, 20);
 
-var music;
+function mus(){
+    const music = new Audio('Tetris.mp3');
+    music.play();
+    music.loop = true;
+    console.log(music);
+}
 
 function arenaSweep() {
     let rowCount = 1;
@@ -267,36 +273,16 @@ const player = {
     score: 0,
 };
 
-function sound(src) {
-    this.sound = document.createElement("audio");
-    this.sound.src = src;
-    this.sound.setAttribute("preload", "auto");
-    this.sound.setAttribute("controls", "none");
-    this.sound.style.display = "none";
-    document.body.appendChild(this.sound);
-    this.play = function(){
-      this.sound.play();
-    }
-    this.stop = function(){
-      this.sound.pause();
-    }
-  }
-
 function startGame(){
     playerReset();
     updateScore();
     update();
+    //mus();
 }
 
 function reset(){
-    player.score = 0;
-    playerReset();
-    updateScore();
-    update();
+    startGame();
 }
 
-music = new sound('Tetris.mp3');
-music.play();
 
-//music doesn't play automatically, only after I interacted with the document and reset the play.
 //reset didn't reset the whole board just the piece.

@@ -2,12 +2,12 @@ body{
     background: #202028;
     color: #fff;
     font-family: sans-serif;
-    font-size: 2em;
+    font-size: 30px;
     text-align: center;
 }
 canvas{
     border: solid .2em #0DC2FF;
-    height: 90%;
+    height: 70%;
 }
 #t{
     color: #FF0D72;
@@ -29,23 +29,27 @@ canvas{
 }
 #sc{
     color: #F538FF;
+    font-size: 25px;
 }
 #play{
     background-color: #FF8E0D;
     color: black;
     padding: 10px;
+    font-size: 15px;
     margin: 20px 20px 25px 20px;
 }
 #reset{
     background-color: #FF0D72;
     color: black;
     padding: 10px;
+    font-size: 15px;
     margin: 20px 20px 25px 20px;
 }
 #instructions{
     background-color: #0DFF72;
     color: black;
     padding: 10px;
+    font-size: 15px;
     margin: 20px 20px 25px 20px;
 }
 p {
@@ -86,3 +90,8 @@ p {
     text-decoration: none;
     cursor: pointer;
 }
+
+#mus{
+    color: white;
+}
+
