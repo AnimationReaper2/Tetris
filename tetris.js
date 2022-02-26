@@ -48,6 +48,7 @@ function clearBoard() {
     //context.scale(20, 20) -> clears the board to black but you can't adding anything to it
     //maybe fill the whole board
     context.clearRect(0, 0, canvas.width, canvas.height);
+    console.log('I couldnt get the board to reset I have tried different ways but nothing worked.')
 }
 
 function collide(arena, player) {
@@ -287,14 +288,12 @@ function startGame(){
     playerReset();
     updateScore();
     update();
-    //mus();
+    mus();
 }
 
 function reset(){
     player.score = 0;
     clearBoard();
-    startGame();
 }
-
 
 //reset didn't reset the whole board just the piece.
