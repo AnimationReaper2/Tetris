@@ -25,13 +25,6 @@ window.onclick = function (event) {
 
 context.scale(20, 20);
 
-function mus(){
-    const music = new Audio('Tetris.mp3');
-    music.play();
-    music.loop = true;
-    console.log(music);
-}
-
 function arenaSweep() {
     let rowCount = 1;
     outer: for (let y = arena.length -1; y > 0; --y) {
@@ -48,6 +41,13 @@ function arenaSweep() {
         player.score += rowCount * 10;
         rowCount *= 2;
     }
+}
+
+function clearBoard() {
+    //I can't get the board reset
+    //context.scale(20, 20) -> clears the board to black but you can't adding anything to it
+    //maybe fill the whole board
+    context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 function collide(arena, player) {
@@ -149,6 +149,13 @@ function merge(arena, player) {
             }
         });
     });
+}
+
+function mus(){
+    const music = new Audio('Tetris.mp3');
+    music.play();
+    music.loop = true;
+    console.log(music);
 }
 
 function rotate(matrix, dir) {
@@ -273,7 +280,10 @@ const player = {
     score: 0,
 };
 
+
 function startGame(){
+    player.score = 0;
+    //clearBoard();
     playerReset();
     updateScore();
     update();
@@ -281,6 +291,8 @@ function startGame(){
 }
 
 function reset(){
+    player.score = 0;
+    clearBoard();
     startGame();
 }
 
