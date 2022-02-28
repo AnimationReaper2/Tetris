@@ -45,12 +45,24 @@ function arenaSweep() {
     }
 }
 
-function clearBoard() {
+function clearBoard(arena, player) {
     //I can't get the board reset
     //context.scale(20, 20) -> clears the board to black but you can't adding anything to it
     //maybe fill the whole board
     music.pause();
-    console.log(canvas);
+    
+    const n = player.matrix;
+    for(let y = 0; y < n.length; ++y){
+        for(let x = 0; x < n[y].length; ++x){
+            if(n[y][x] !== 0){
+                player.pos.y--;
+                playerReset();
+                merge(arena, player);
+                arenaSweep();
+                updateScore();
+            }
+        }
+    }
 }
 
 function collide(arena, player) {
@@ -285,7 +297,6 @@ const player = {
 
 function startGame(){
     player.score = 0;
-    clearBoard();
     playerReset();
     updateScore();
     update();
@@ -294,7 +305,7 @@ function startGame(){
 
 function reset(){
     player.score = 0;
-    clearBoard();
+    clearBoard(arena, player);
     startGame();
     mus();
 }
