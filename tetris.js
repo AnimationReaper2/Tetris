@@ -46,9 +46,6 @@ function arenaSweep() {
 }
 
 function clearBoard(arena, player) {
-    //I can't get the board reset
-    //context.scale(20, 20) -> clears the board to black but you can't adding anything to it
-    //maybe fill the whole board
     music.pause();
     
     const n = player.matrix;
@@ -309,5 +306,3 @@ function reset(){
     startGame();
     mus();
 }
-
-//reset didn't reset the whole board just the piece.
