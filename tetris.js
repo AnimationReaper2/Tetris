@@ -25,6 +25,8 @@ window.onclick = function (event) {
 
 context.scale(20, 20);
 
+const music = new Audio('Tetris.mp3');
+
 function arenaSweep() {
     let rowCount = 1;
     outer: for (let y = arena.length -1; y > 0; --y) {
@@ -47,8 +49,8 @@ function clearBoard() {
     //I can't get the board reset
     //context.scale(20, 20) -> clears the board to black but you can't adding anything to it
     //maybe fill the whole board
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    console.log('I couldnt get the board to reset I have tried different ways but nothing worked.')
+    music.pause();
+    console.log(canvas);
 }
 
 function collide(arena, player) {
@@ -153,7 +155,6 @@ function merge(arena, player) {
 }
 
 function mus(){
-    const music = new Audio('Tetris.mp3');
     music.play();
     music.loop = true;
     console.log(music);
@@ -284,7 +285,7 @@ const player = {
 
 function startGame(){
     player.score = 0;
-    //clearBoard();
+    clearBoard();
     playerReset();
     updateScore();
     update();
@@ -294,6 +295,8 @@ function startGame(){
 function reset(){
     player.score = 0;
     clearBoard();
+    startGame();
+    mus();
 }
 
 //reset didn't reset the whole board just the piece.
